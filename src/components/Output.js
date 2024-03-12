@@ -31,13 +31,13 @@ const Output = ({editorRef,language}) => {
 
   return (
     <Box w="50%">
-      <Text mb={2} fontSize="lg">
-        Output
+      <Text mb={2} fontSize="lg" color="white">
+        Output:
       </Text>
       <Button variant="outline" colorScheme='green' mb={4} isLoading={Loading} onClick={runCode}>
         Run Code
       </Button>
-      <Box height="75vh" color={isError?"red.400":""} p={2} border="1px solid" borderRadius={4} borderColor={isError?"red.500" : "#333"}>
+      <Box height="75vh" color={isError?"red.400":"white"} p={2} border="1px solid" borderRadius={4} borderColor={isError?"red.500" : "#333"}>
         {output?output.map(
           (line,i)=><Text key={i}>{line}</Text>
         ):'Click "Run Code" to see the output here'}

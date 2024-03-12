@@ -13,12 +13,12 @@ import { LANGUAGE_VERSIONS } from "../constants";
 //this line return an array of a given objects
 const languages = Object.entries(LANGUAGE_VERSIONS);
 
-const ACTIVE_COLOR = "blue.400";
+const ACTIVE_COLOR = "blue.300";
 
 const LanguageSelector = ({ language, onSelect }) => {
   return (
     <Box ml={2} mb={4}>
-      <Text mb={2} fontSize="lg">
+      <Text mb={2} fontSize="lg" color="white">
         Language:
       </Text>
       <Menu isLazy>
@@ -27,7 +27,7 @@ const LanguageSelector = ({ language, onSelect }) => {
           {languages.map(([lang, version]) => (
             <MenuItem
               key={lang}
-              color={lang === language ? ACTIVE_COLOR : ""}
+              color={lang === language ? ACTIVE_COLOR : "white"}
               bg={lang === language ? "gray.900" : "transparent"}
               _hover={{
                 color: ACTIVE_COLOR,
@@ -37,7 +37,7 @@ const LanguageSelector = ({ language, onSelect }) => {
             >
               {lang}
               &nbsp;
-              <Text as="span" color="gray.600" fontSize="sm">
+              <Text as="span" color="gray.500" fontSize="sm">
                 ({version})
               </Text>
             </MenuItem>

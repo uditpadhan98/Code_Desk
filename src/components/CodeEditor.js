@@ -1,4 +1,4 @@
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack,Heading } from "@chakra-ui/react";
 import { Editor } from "@monaco-editor/react";
 import React, { useState,useRef } from "react";
 import LanguageSelector from "./LanguageSelector";
@@ -22,6 +22,7 @@ const CodeEditor = () => {
 
   return (
     <Box>
+        <Heading color="white" w="100%" mb={5} style={{display:"flex",justifyContent:"center"}}>Online Code Editor</Heading>
         <HStack spacing={4}>
             <Box w="50%">
                 <LanguageSelector language={language} onSelect={onSelect} />
